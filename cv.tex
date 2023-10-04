@@ -2,6 +2,24 @@
 \usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} 
 \usepackage{hyperref}
 \usepackage{url}
+
+\RequirePackage{color,graphicx}
+\usepackage{multicol}
+\usepackage{etoolbox}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{enumerate}
+% \usepackage{academicons}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\usepackage{graphicx}
+\newsavebox\CBox
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textbf{#1}}}
+
+
 \urldef\myurl\url{http://www.cs.cmu.edu/~NatProg/papers/DTSHPS%20paper%207%20-%20one-page-summary-with-references%20v2.pdf}
 \urldef\myurl2\url{https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/42857/DTSHPS18-Proceedings-final%20v2.pdf}
 
@@ -11,9 +29,19 @@
 \address{\href{https://janeon.github.io}{janeon.github.io } \\  jhsieh2@cs.cmu.edu}
 \begin{document}
 \begin{rSection}{Education}
-{\bf Carnegie Mellon University}{ \href{https://se-phd.isri.cmu.edu/People/students/index.html}{PhD candidate in Software Engineering}} \hfill { August 2020 - Present} \\ 
-{\bf Oberlin College} {Bachelor of Arts Degree in \href{https://www.cs.oberlin.edu/}{Computer Science (High Honors)}} \hfill { August 2016 - May 2020} \\
-and \href{https://www.oberlin.edu/arts-and-sciences/departments/mathematics}{Mathematics}, with a \href{https://www.oberlin.edu/cognitive-sciences}{Concentration in Cognitive Science} \hfill {(CS Major) GPA: (3.77) 3.71} 
+{\bf Carnegie Mellon University}{ \href{https://se-phd.isri.cmu.edu/People/students/index.html}{PhD in Software Engineering}\href{https://haiyizhu.com/}{, advised by Haiyi Zhu}} \hfill { August 2020 - Present} \\ 
+{\bf Oberlin College} {BA in \href{https://www.cs.oberlin.edu/}{Computer Science (with High Honors)}} and Mathematics \hfill { August 2016 - May 2020} \\
+\href{https://www.oberlin.edu/arts-and-sciences/departments/mathematics}
+with  \href{https://www.oberlin.edu/cognitive-sciences}{Concentration in Cognitive Science} \hfill {(Major) GPA: (3.77) 3.71} 
+
+% My research focuses on the ways that technological systems and market forces construct socially valuable bodies; I seek to challenge dominant discourses around disability, sexuality, and expertise through community-driven design methods. I hold a BA in Bioethics & Design from UC Berkeley.
+
+{My research is broadly focused on impacts AI-powered systems on online communities and mitigation strategies for algorithmic harms. 
+In particular, I explore ways improving the well-being and working conditions of gig workers via technology and policy advancements. 
+Leveraging empirical and design techniques, I integrate perspectives of multiple stakeholder groups to develop frameworks for facilitating collectivism and empowerment among gig workers.
+
+}
+
 % Member of {\em IEEE} and {\em American Physical Society} \hfill {Cumulative GPA: 3.71} \\
 % IB Diploma recipient \hfill {HS Ranking: 2/22}
 \end{rSection}
@@ -27,99 +55,116 @@ and \href{https://www.oberlin.edu/arts-and-sciences/departments/mathematics}{Mat
 
 
 \begin{rSection}{Publications \& Preprints}
-\begin{enumerate}
-    \item \textbf{Jane Hsieh}, Miranda Karger, Lucas Zagal, Haiyi Zhu, ``Co-Designing Alternatives for the Future of Gig Worker Well-Being: Navigating Multi-Stakeholder Incentives and Preferences", \textit{Designing Interactive Systems Conference, DIS ’23}, Pittsburgh, PA, \href{https://janeon.github.io/resources/DIS23.pdf}{Preprint}.
-    \item \textbf{Jane Hsieh}, Oluwatobi Adisa, Sachi Bafna, Haiyi Zhu, ``Designing Individualized Policy and Technology Interventions to Improve Gig Work Conditions", \textit{Annual Symposium on Human-Computer Interaction for Work 2023, CHIWORK '23}, Oldenburg, DE, \href{https://janeon.github.io/resources/CHIWORK_Position_Paper.pdf}{Preprint}.
-    \item \textbf{Jane Hsieh}, Yili Hong, Gordon Burtch, Haiyi Zhu, ``A Little Too Personal: Effects of Standardization versus Personalization on Job Acquisition, Work Completion, and Revenue for Online Freelancers", \textit{CHI Conference on Human Factors in Computing Systems, CHI ’22}, New Orleans, LA, \href{https://dl.acm.org/doi/pdf/10.1145/3491102.3517546}{ACM DL}.
-    \item Michael Xieyang Liu, \textbf{Jane Hsieh}, Nathan Hahn, Angelina Zhou, Emily Deng, Shaun Burley, Cynthia Taylor, Aniket Kittur, Brad A. Myers, ``Unakite: Scaffolding Developers’ Decision Making About Trade-offs through Capturing and Organizing Web Resources", \textit{ACM Symposium on User Interface Software and Technology, UIST'19}, New Orleans, LA, October 20-23, 2019. pp. 67-80. \href{https://dl.acm.org/citation.cfm?id=3347908}{ACM DL} and \href{http://www.cs.cmu.edu/~NatProg/papers/p67-liu-Unakite-UIST.pdf}{local pdf}.\\
-    \textbf{Best Paper Honorable Mention Award} from the ACM Symposium on User Interface Software and Technology, UIST'19 (top 6 out of 93 accepted papers). 
-    \item Michael Xieyang Liu, Nathan Hahn, Angelina Zhou, Shaun Burley, Emily Deng, \textbf{Jane Hsieh}, Aniket Kittur and Brad A. Myers, ``UNAKITE: Support Developers for Capturing and Persisting Design Rationales When Solving Problems Using Web Resources", \textit{DTSHPS'18 Workshop on Designing Technologies to Support Human Problem Solving} (\href{https://www.cs.washington.edu/dtshps2018/index.html}{DTSHPS'18}) at VL/HCC'2018. Oct. 1, 2018. p. 25. \href{\myurl}{extended abstract} or \href{\myurl2}{full proceedings}.
-    \item \textbf{Jane Hsieh}, Michael Xieyang Liu, Brad A. Myers, Aniket Kittur, ``Poster: An Exploratory Study of Web Foraging to Understand and Support Programming Decisions," \textit{2018 IEEE Symposium on Visual Languages and Human-Centric Computing} (VL/HCC'18), October 1 - 4, 2018, Lisbon, Portugal. pp. 305-306. \href{https://ieeexplore.ieee.org/document/8506517}{IEEE DL} and \href{http://www.cs.cmu.edu/~NatProg/papers/p305-hsieh.pdf}{local pdf}.
-    \item Yumi Ijiri, Kathryn L. Krycka, Ian Hunt-Isaak, Hillary Pan, \textbf{Jane Hsieh}, Julie A. Borchers, James J. Rhyne, Samuel D. Oberdick, Ahmed Abdelgawad, Sarah A. Majetich, ``Correlated spin canting in ordered core-shell Fe$_3$O$_4$/Mn$_x$Fe$_{3-x}$O$_4$ nanoparticle polycrystalline assemblies," \textit{Physical Review B} 99(9). March 18, 2019. p. 094421. \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.094421}{APS DL} and \href{https://janeon.github.io/assets/img/PhysRevB.99.094421.pdf}{local pdf}.
+\begin{itemize}
+    \item \textBF{Jane Hsieh}, Joselyn Kim, Laura Dabbish, Haiyi Zhu, ``Nip it in the Bud": Moderation Strategies in Open Source Software Projects and the Role of Bots'', \textit{ACM Conference On Computer-Supported Cooperative Work And Social Computing, CSCW ’23}, Minneapolis, MN. \href{https://arxiv.org/pdf/2308.07427.pdf}{arXiv}.
+    \item \textBF{Jane Hsieh}, Miranda Karger, Lucas Zagal, Haiyi Zhu, ``Co-Designing Alternatives for the Future of Gig Worker Well-Being: Navigating Multi-Stakeholder Incentives and Preferences", \textit{Designing Interactive Systems Conference, DIS ’23}, Pittsburgh, PA, \href{https://arxiv.org/abs/2302.13436}{arXiv}.
+    \item \textBF{Jane Hsieh}, Oluwatobi Adisa, Sachi Bafna, Haiyi Zhu, ``Designing Individualized Policy and Technology Interventions to Improve Gig Work Conditions", {\color{red}Best Paper Award} (1 of 13) from the \textit{Annual Symposium on Human-Computer Interaction for Work 2023, CHIWORK '23}, Oldenburg, DE. \href{https://arxiv.org/abs/2306.12972}{arXiv}.
+    \item \textBF{Jane Hsieh}, Yili Hong, Gordon Burtch, Haiyi Zhu, ``A Little Too Personal: Effects of Standardization versus Personalization on Job Acquisition, Work Completion, and Revenue for Online Freelancers", \textit{CHI Conference on Human Factors in Computing Systems, CHI ’22}, New Orleans, LA, \href{https://dl.acm.org/doi/pdf/10.1145/3491102.3517546}{ACM DL}.
+    \item Michael Xieyang Liu, \textBF{Jane Hsieh}, Nathan Hahn, Angelina Zhou, Emily Deng, Shaun Burley, Cynthia Taylor, Aniket Kittur, Brad A. Myers, ``Unakite: Scaffolding Developers’ Decision Making About Trade-offs through Capturing and Organizing Web Resources", {\color{red}Best Paper Honorable Mention Award} (top 6 of 93) from the \textit{ACM Symposium on User Interface Software and Technology, UIST'19}, New Orleans, LA, October 20-23, 2019. pp. 67-80. \href{https://dl.acm.org/citation.cfm?id=3347908}{ACM DL} and \href{http://www.cs.cmu.edu/~NatProg/papers/p67-liu-Unakite-UIST.pdf}{local pdf}.
+    
+    \item Yumi Ijiri, Kathryn L. Krycka, Ian Hunt-Isaak, Hillary Pan, \textBF{Jane Hsieh}, Julie A. Borchers, James J. Rhyne, Samuel D. Oberdick, Ahmed Abdelgawad, Sarah A. Majetich, ``Correlated spin canting in ordered core-shell Fe$_3$O$_4$/Mn$_x$Fe$_{3-x}$O$_4$ nanoparticle polycrystalline assemblies," \textit{Physical Review B} 99(9). March 18, 2019. p. 094421. \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.094421}{APS DL} and \href{https://janeon.github.io/assets/img/PhysRevB.99.094421.pdf}{local pdf}.
 
-\end{enumerate}
+\end{itemize}
 \end{rSection}
 
-\begin{rSection}{Teaching \& Mentoring}
-{\bf TA for Human AI Interaction Course} \hfill  {\em Fall 2022 and upcoming Fall 2023} \\
-{Lectured, graded and held office hours for class of ~40 students}
-\begin{center}
-{\bf Mentored Undergraduate Students}     
-\end{center}
-{Mialy Rasetarinera \& Erik Chou (HCII REU)} \hfill  {\em Summer 2023} \\
-{Miranda Karger \& Lucas Zagal (HCII REU)} \hfill  {\em Summer 2022} \\
-{Joselyn Kim} \hfill  {\em Fall - Spring 2021} \\
 
-{\bf \href{https://www.oberlin.edu/career/set/soar/soar-leaders}{Sophomore Opportunities \& Academic Resources (SOAR) Leader}} \hfill{\em Fall 2019 - Spring 2020} \\
-Recruit participants and plan for winter retreat to provide students with resources for major declaration.
+\begin{rSection}{Lightly-reviewed publications}
+\begin{itemize}
 
-{\bf Office hour holder, Grader and Tutor for Algorithms} \hfill {\em Fall 2018} \\
-{ Led group workshops to guide students on homework problems twice per week and graded 20 responses.} 
+    \item Michael Xieyang Liu, Nathan Hahn, Angelina Zhou, Shaun Burley, Emily Deng, \textBF{Jane Hsieh}, Aniket Kittur and Brad A. Myers, ``UNAKITE: Support Developers for Capturing and Persisting Design Rationales When Solving Problems Using Web Resources", \textit{DTSHPS'18 Workshop on Designing Technologies to Support Human Problem Solving} (\href{https://www.cs.washington.edu/dtshps2018/index.html}{DTSHPS'18}) at VL/HCC'2018. Oct. 1, 2018. p. 25. \href{http://www.cs.cmu.edu/~NatProg/papers/DTSHPS%20paper%207%20-%20one-page-summary-with-references%20v2.pdf}{extended abstract} or \href{https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/42857/DTSHPS18-Proceedings-final%20v2.pdf}{full proceedings}.
 
-{\bf Lab helper for Introductory course in Python} \hfill {\em Spring 2017, 2018} \\
-{ Assisted $\approx$ 20 students debug and find logical errors in weekly Python assignments}
-
-{\bf Oberlin Workshop \& Learning Sessions (OWLS) Leader for Algorithms} \hfill {\em Fall 2018} \\
-{ Attended class to plan and lead interactive, non-traditional workshops (weekly)} 
-
-{\bf Advanced Chinese Drill Session Teacher} \hfill {\em Spring 2017} \\
-{ Created lesson plans (after attending class) to lead weekly drills to help students improve speaking fluency}
-
+    \item \textBF{Jane Hsieh}, Michael Xieyang Liu, Brad A. Myers, Aniket Kittur, ``Poster: An Exploratory Study of Web Foraging to Understand and Support Programming Decisions," \textit{2018 IEEE Symposium on Visual Languages and Human-Centric Computing} (VL/HCC'18), October 1 - 4, 2018, Lisbon, Portugal. pp. 305-306. \href{https://ieeexplore.ieee.org/document/8506517}{IEEE DL} and \href{http://www.cs.cmu.edu/~NatProg/papers/p305-hsieh.pdf}{local pdf}.
+\end{itemize}
 \end{rSection}
 
 \begin{rSection}{Experiences}
 
-{\bf Data Science Consultant at Upwork Inc.} \hfill  {\em Summer 2021 - ongoing} \\
-{Measuring and improving fairness within the platform, supervised initially by by Sibo Lu} \hfill {Remote} 
+\textbf{Data Science Consultant at Upwork Inc.} \hfill  {\em Summer 2021 - Spring 2022} \\
+{Supervised by Sibo Lu} \hfill {Remote} 
 
-{\bf Software Enginner Intern on IBM's Toolbox Team} \hfill  {\em Summer 2020} \\
-{\it Developed Slack and Github drivers for IBM's Support Portal} \hfill { Raleigh, NC} 
+\textbf{Software Engineer Intern on IBM's Toolbox Team} \hfill  {\em Summer 2020} \\
+{\it Developed Slack and Github drivers for IBM's Support Portal} \hfill {Raleigh, NC} 
 
 
-{\bf Computer Science Honors Thesis}
-\hfill  {\em Fall 2019-Spring 2020} \\
-{\href{https://digitalcommons.oberlin.edu/cgi/viewcontent.cgi?article=1693&context=honors}{Constructing Effective Stack Overflow Questions} , advised by \href{https://cs.oberlin.edu/~ctaylor/}{Cynthia Taylor}} \hfill { Oberlin, OH}
+\textbf{Computer Science Honors Thesis} \hfill  {\em Fall 2019-Spring 2020} \\ {\href{https://digitalcommons.oberlin.edu/cgi/viewcontent.cgi?article=1693&context=honors}{Constructing Effective Stack Overflow Questions}, advised by \href{https://cs.oberlin.edu/~ctaylor/}{Cynthia Taylor}} \hfill {Oberlin, OH}
 
 % {Conducted literature review to find factors of successful questions, and verified with a two-proportions Z-test} \\
 % {Developed a dynamic \href{https://github.com/janeon/honors-plugin}{Chrome plugin} that provides actionable suggestions to users constructing questions}
 
-\href{https://www.ibm.com/employment/extremeblue/index.html}{\bf Extreme Blue Technical Intern, managed by Ross Grady}\hfill  {\em Summer 2019} \\
+\href{https://www.ibm.com/employment/extremeblue/index.html}{\textbf{Extreme Blue Technical Intern, managed by Ross Grady}} \hfill  {\em Summer 2019} \\
 \href{https://github.com/IBM/multicloud-incident-response-navigator}{Open-sourced terminal application for IBM's Multicloud Manager}, \href{https://priorart.ip.com/IPCOM/000262660}{defense patent application} \hfill { Raleigh, NC} 
 
  
 \href{https://www.cmu.edu/scs/isr/reuse/}{\bf REUSE Research Assistant}, advised by \href{https://www.cs.cmu.edu/~bam/}{Brad Myers} \& \href{https://kittur.org/}{Niki Kittur}\hfill {\em Summer 2018-2019} \\
 \href{https://unakite.info/}{UNAKITE Tool for Tabulated Decision Making}, mentored by \href{https://lxieyang.github.io/}{Michael Liu} \hfill { Pittsburgh, PA}
 
- {\bf \href{https://www.oberlin.edu/undergraduate-research/programs/strong}{STRONG Research Program}} \hfill {\em 2016 - 2018}\\
-Characterizing and Separating Magnetic Nanoparticles , advised by \href{https://www.oberlin.edu/yumi-ijiri}{Yumi Ijiri} \hfill { Oberlin, OH}\\
+{\bf \href{https://www.oberlin.edu/undergraduate-research/programs/strong}{STRONG Research Program}} \hfill {\em 2016 - 2018}\\
+Characterizing and Separating Magnetic Nanoparticles, advised by \href{https://www.oberlin.edu/yumi-ijiri}{Yumi Ijiri} \hfill { Oberlin, OH}
+\end{rSection}
+
+\begin{rSection}{Teaching}
+{\href{https://sites.google.com/andrew.cmu.edu/haii-cmu/}{TA for Human AI Interaction}} \hfill  {\em Fall 2022 and upcoming Fall 2023} 
+% {Lectured, graded and held office hours for class of $\approx$40 students} 
+
+{Office hour holder, Grader and Tutor for Algorithms} \hfill {\em Fall 2018 - 2019} 
+% { Held office hours, graded, tutored, and held OWLS/recitation sessions.} 
+
+{Lab helper for Python course} \hfill {\em Spring 2017, 2018} 
+% { Assisted $\approx$ 20 students debug and find logical errors in weekly Python assignments}
+
+% {\bf Oberlin Workshop \& Learning Sessions (OWLS) Leader for Algorithms} \hfill {\em Fall 2018} \\ { Attended class to plan and lead interactive, non-traditional workshops (weekly)} 
+
+% {\bf Advanced Chinese Drill Session Teacher} \hfill {\em Spring 2017} \\
+% { Created lesson plans (after attending class) to lead weekly drills to help students improve speaking fluency}
+
+\end{rSection}
+
+\begin{rSection}{Mentoring}
+{Mialy Rasetarinera \& \href{https://echou.notion.site/echou/Erik-Chou-bb52b39b95924d3bbd62a83593e28ab6}{Erik Chou} (HCII REU): developing collective data-exchange portal} \hfill  {\em Summer 2023} 
+
+{\href{https://miranda.karger.org/}{Miranda Karger} \& Lucas Zagal (HCII REU): conducted multi-stakeholder co-design sessions} \hfill  {\em Summer 2022} 
+
+{\href{https://www.joselynkim.com/}{Joselyn Kim}: coded, analyzed, and wrote about open source moderation data} \hfill  {\em Fall - Spring 2021} 
+
+{\href{https://www.oberlin.edu/career/set/soar/soar-leaders}{Sophomore Opportunities \& Academic Resources (SOAR) Leader}} \hfill{\em Fall 2019 - Spring 2020}
 
 \end{rSection}
 
 \begin{rSection}{HONORS/AWARDS}
-{\bf National Science Foundation Graduate Research Fellowship} \hfill{2022} 
+{National Science Foundation Graduate Research Fellowship} \hfill{2022} 
 
-{\bf 2020 Annual R.J. Thomas Award for an Outstanding Computer Science Student (\$500)} \hfill{2020} 
+{2020 Annual R.J. Thomas Award for an Outstanding Computer Science Student} \hfill{2020} 
 
-{\bf Clare Boothe Luce Scholarship at Oberlin College} \hfill{\em Tuition scholarship for Fall 2018 - Spring 2019} 
+{Clare Boothe Luce Scholarship at Oberlin College} \hfill{\em Tuition scholarship for Fall 2018 - Spring 2019} 
 
-{\bf John F. Oberlin Scholarship}\hfill{\em 2016 - 2020} 
+% {\bf John F. Oberlin Scholarship}\hfill{\em 2016 - 2020} 
 
-{\bf STRONG Scholarship \& IB Diploma recipient }\hfill{\em Summer 2016}
+{STRONG Scholarship \& IB Diploma recipient }\hfill{\em Summer 2016}
 
 \end{rSection}
 
 \begin{rSection}{Service \& Volunteering} 
-{\bf Subcommittee Chair Assistant to \href{https://chi2023.acm.org/subcommittees/selecting-a-subcommittee/}{Interaction Beyond the Individual Subcommittee}} \hfill{\em CHI 2023} \\
-Tech support and assistance to subcommittee chairs during and prior to PC meetings 
+{Subcommittee Chair Assistant to \href{https://chi2023.acm.org/subcommittees/selecting-a-subcommittee/}{Interaction Beyond the Individual Subcommittee}} \hfill{\em CHI 2023} 
+% Tech support and assistance to subcommittee chairs during and prior to PC meetings 
 
-{\bf Member of the \href{https://scs-phd-deans-committee.github.io/working-groups}{DPAC Undergrad Research Engagement Working Group}} \hfill{\em Fall 2021 - ongoing} \\
-Plan and organize research mixers and panels
+{Member of the \href{https://scs-phd-deans-committee.github.io/working-groups}{DPAC Undergrad Research Engagement Working Group}} \hfill{\em Fall 2021 - ongoing} 
+% Plan and organize research mixers and panels
 
-{\bf \href{https://www.oc2020.oberlincollegelibrary.org/}{Web Dev for Digital Yearbook}} \hfill{\em Summer 2020} \\
-Designed and implemented visual layout to the digital yearbook using Omeka Classic, CSS, HTML and PHP.
+{\href{https://www.oc2020.oberlincollegelibrary.org/}{Web Dev for Digital Yearbook}} \hfill{\em Summer 2020} 
+% Designed and implemented visual layout to the digital yearbook using Omeka Classic, CSS, HTML and PHP.
 
-{\bf \href{https://www.oberlin.edu/admissions-and-aid/for-accepted-students/virtual-visits/covid-19-course}{Uncovering Covid Workshop Leader}} \hfill{\em Spring 2020} \\
-Planned, trained for and led weekly discussions for 15 admitted Oberlin students on a half-module course exploring Covid-19 from a variety of disciplines. Attended weekly lectures by professors from 8 departments.
+
+{\href{https://advance.oberlin.edu/events/2020/10/13/uncovering-covid-19-critical-liberal-arts-perspectives-lecture-series}{Uncovering Covid Workshop Leader}} \hfill{\em Spring 2020}
+% Planned, trained for and led weekly discussions for 15 admitted Oberlin students on a half-module course exploring Covid-19 from a variety of disciplines. Attended weekly lectures by professors from 8 departments.
+
+{REUSE (Software Engineering REU at CMU) Admissions Panel}\hfill{\em 2021-2023}	
+
+{Reviewer for ACM CHI} \hfill {\em 2020, 2023}
+
+{Student Volunteer for ACM CHI and DIS} \hfill {\em 2023}
+% \begin{rSection}{Reviewing}
+
+% \end{rSection}
 
 % \href{http://www.cs.oberlin.edu/~csmc/officers.php}{\textbf{Computer Science Majors Committee Member}} \hfill {\em Fall 2018 - Spring 2020} \\
 % { Organized department activities, updated committee websites, held weekly office hours} 
